@@ -9,6 +9,7 @@ public class TableHealth {
     private boolean hasPrimaryKey;
     private int indexCount;
     private List<String> warnings = new ArrayList<>();
+    private List<String> suggestions = new ArrayList<>();
 
     public TableHealth(String tableName) {
         this.tableName = tableName;
@@ -48,5 +49,13 @@ public class TableHealth {
 
     public void addWarning(String warning) {
         warnings.add(warning);
+    }
+
+    public List<String> getSuggestions() {
+        return suggestions;
+    }
+
+    public void addSuggestion(String suggestion) {
+        suggestions.add(suggestion);
     }
 }

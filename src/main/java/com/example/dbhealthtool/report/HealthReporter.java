@@ -33,6 +33,13 @@ public class HealthReporter {
                 }
             }
 
+            if (!table.getSuggestions().isEmpty()) {
+                System.out.println("- Suggestions:");
+                for (String suggestion : table.getSuggestions()) {
+                    System.out.println("  " + suggestion);                
+                }
+            }
+
             System.out.println();
         }
 
@@ -74,6 +81,13 @@ public class HealthReporter {
                         writer.write("Warning: " + warning + "\n");
                     }
                 }
+
+                if (!table.getSuggestions().isEmpty()) {
+                    writer.write("Suggestions:\n");
+                    for (String suggestion : table.getSuggestions()) {
+                        writer.write("  " + suggestion + "\n");
+                    }
+                 }
 
                 writer.write("\n");
             }

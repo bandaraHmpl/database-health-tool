@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import com.example.dbhealthtool.report.SuggestionEngine;
 
 public class MetadataScanner {
 
@@ -95,6 +96,9 @@ public class MetadataScanner {
         if (uniqueIndexes.isEmpty()) {
             tableHealth.addWarning("No indexes found");
         }
+
+        SuggestionEngine suggestionEngine = new SuggestionEngine();
+        suggestionEngine.generateSuggestions(tableHealth);
 
         return tableHealth;
     }
