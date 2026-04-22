@@ -1,0 +1,5 @@
+target/
+*.class
+report.txt
+.idea/
+.vscode/
