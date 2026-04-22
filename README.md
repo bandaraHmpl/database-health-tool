@@ -1,60 +1,36 @@
-# 🚀 Database Health Analysis Tool
+# Database Health Tool
 
-A Java-based tool that analyzes database tables and generates health reports.
+Java-based tool to analyze database structure and generate health reports with SQL optimization suggestions.
 
-## 🔍 Features
+## Features
 
-* Scan full database
-* Scan individual tables
-* Detect missing primary keys
-* Detect missing indexes
+* Scan full database or single table
+* Detect missing primary keys and indexes
 * Generate health score
-* Export report to file (`report.txt`)
+* Export report to file
+* Provide SQL suggestions
 
-## 🛠 Technologies
+## Tech Stack
 
-* Java
+* Java (JDK 17)
 * JDBC
 * MySQL
 
-## ▶️ How to Run
+## Run
 
-1. Configure database:
+```bash
+mvn clean compile
+mvn exec:java -Dexec.mainClass="com.example.dbhealthtool.Main"
+```
+
+## Config
+
+Edit:
 
 ```
 src/main/resources/config.properties
 ```
 
-2. Run:
+## Author
 
-```
-Main.java
-```
-
-## 📊 Example Output
-
-```
-Table: users
-Primary Key: YES
-Columns: 5
-Index Count: 1
-Warning: No issue found
-
-Health Score: 100/100
-Overall Status: Excellent
-```
-
-## 📁 Project Structure
-
-```
-src/
- ├── config/
- ├── model/
- ├── scanner/
- ├── report/
- └── Main.java
-```
-
-## 👨‍💻 Author
-
-Lakshan
+Lakshan – University of Ruhuna
